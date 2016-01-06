@@ -1,4 +1,8 @@
-<h1>The winner is: </h1>
-<%= @move[0] %>
-<br />
-<%= @move[1] %>
+<%= erb :_head %>
+<div class="winner">
+  <p>The winner is: <%= @move[0] %></p>
+</div>
+
+<div class="computer">
+  <p>The computer chose: <%= @move[1] %></p>
+</div>
