@@ -12,4 +12,12 @@ describe('rock_paper_scis path', {:type => :feature}) do
     click_button("Rock")
     expect(page).to have_content("Computer")
   end
+
+  it("return winner if player move is rock and opponent is scissors and then returns to the homepage") do
+    visit('/')
+    click_button("Rock")
+    click_link("Return")
+    click_button("Rock")
+    expect(page).to have_content("Computer")
+  end
 end
